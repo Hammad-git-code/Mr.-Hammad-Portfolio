@@ -100,6 +100,1671 @@ nav {
   color: var(--paper) !important;
 }
 
+/* ─── MAIN ─── */
+main { padding-top: 60px; }
+
+/* ─── HERO ─── */
+#hero {
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  padding: 80px 64px 80px 80px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Decorative ruled lines */
+.hero-left::before {
+  content: '';
+  position: absolute;
+  left: 80px; top: 0; bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--border2) 0px,
+    var(--border2) 1px,
+    transparent 1px,
+    transparent 28px
+  );
+  opacity: 0.7;
+}
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+  margin-left: 20px;
+}
+
+.eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--rust);
+}
+
+.eyebrow-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--rust);
+  letter-spacing: 2.5px; text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 6vw, 88px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 6px;
+  margin-left: 20px;
+}
+
+.name-line2 {
+  font-style: italic;
+  color: var(--rust);
+}
+
+.hero-subtitle {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+  margin-left: 20px;
+}
+
+.hero-bio {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink2);
+  max-width: 440px;
+  margin-bottom: 48px;
+  margin-left: 20px;
+  font-weight: 300;
+}
+
+.hero-bio strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hero-actions {
+  display: flex; gap: 14px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 13px 30px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px; letter-spacing: 0.5px;
+  border: none; border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--rust);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196,82,42,0.25);
+}
+
+.btn-outline {
+  padding: 13px 30px;
+  background: transparent;
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px; letter-spacing: 0.5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  border-color: var(--ink);
+}
+
+/* ─── HERO RIGHT: typographic composition ─── */
+.hero-right {
+  position: relative;
+  border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px;
+  background: var(--paper2);
+  overflow: hidden;
+}
+
+/* Logo mark */
+.hero-initial {
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 340px;
+  height: 340px;
+  opacity: 0.18;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-meta-stack {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column;
+  gap: 0;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.meta-row:first-child { border-top: 1px solid var(--border); }
+
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--muted2);
+  text-transform: uppercase; letter-spacing: 2px;
+}
+
+.meta-value {
+  font-size: 14px; font-weight: 500;
+  color: var(--ink);
+  text-align: right;
+}
+
+.meta-value.accent { color: var(--rust); }
+
+.hero-location-block {
+  margin-top: 28px;
+  position: relative; z-index: 2;
+}
+
+.location-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--muted2);
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.location-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  font-style: italic;
+  color: var(--ink2);
+}
+
+/* ─── SECTIONS ─── */
+section {
+  padding: 100px 80px;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.section-label {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 56px;
+}
+
+.s-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--muted2);
+  letter-spacing: 2px;
+}
+
+.s-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px; font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--ink);
+}
+
+.s-title em {
+  color: var(--rust);
+  font-style: italic;
+}
+
+.s-rule {
+  flex: 1; height: 1px;
+  background: var(--border);
+}
+
+/* ─── SKILLS ─── */
+#skills { background: var(--paper); }
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.skill-group-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted2);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-list {
+  display: flex; flex-direction: column; gap: 0;
+}
+
+.skill-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border2);
+  transition: all 0.2s;
+}
+
+.skill-item:hover { padding-left: 8px; }
+.skill-item:hover .skill-name { color: var(--rust); }
+
+.skill-name {
+  font-size: 14px; font-weight: 400;
+  transition: color 0.2s;
+}
+
+.skill-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--muted2);
+  background: var(--paper3);
+  padding: 3px 8px; border-radius: 3px;
+}
+
+/* ─── EDUCATION ─── */
+#education { background: var(--paper2); }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.edu-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.edu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(26,20,16,0.08);
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--rust);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.edu-card:hover::before { transform: scaleX(1); }
+
+.edu-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--rust);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.edu-degree {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.edu-school {
+  font-size: 13px; color: var(--muted);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.edu-badges {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+
+.edu-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--ink2);
+  background: var(--paper2);
+}
+
+.edu-badge.highlight {
+  border-color: var(--rust);
+  color: var(--rust);
+  background: var(--rust-light);
+}
+
+/* ─── CERTIFICATIONS ─── */
+#certifications { background: var(--paper); }
+
+.certs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cert-row {
+  display: flex; align-items: center; gap: 20px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--paper);
+  transition: all 0.2s;
+}
+
+.cert-row:hover {
+  border-color: var(--rust);
+  background: var(--rust-light);
+}
+
+.cert-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900;
+  font-style: italic;
+  color: var(--paper3);
+  line-height: 1;
+  min-width: 36px;
+}
+
+.cert-info { flex: 1; }
+
+.cert-title {
+  font-size: 14px; font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.cert-issuer {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--muted);
+}
+
+.cert-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--muted2);
+  white-space: nowrap;
+}
+
+/* ─── LANGUAGES ─── */
+#languages { background: var(--paper2); }
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.lang-card {
+  padding: 36px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+.lang-header {
+  display: flex; justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.lang-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--ink);
+}
+
+.lang-proficiency {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--rust);
+  text-transform: uppercase; letter-spacing: 2px;
+}
+
+.lang-divider {
+  height: 1px; background: var(--border);
+  margin-bottom: 24px;
+}
+
+.lang-skills { display: flex; flex-direction: column; gap: 12px; }
+
+.lang-row {
+  display: flex; align-items: center; gap: 14px;
+}
+
+.lang-row-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--muted);
+  width: 80px; flex-shrink: 0;
+}
+
+.lang-bar-bg {
+  flex: 1; height: 3px;
+  background: var(--paper3);
+  border-radius: 2px; overflow: hidden;
+}
+
+.lang-bar {
+  height: 100%; border-radius: 2px;
+  background: var(--ink);
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lang-score {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--rust);
+  width: 22px; text-align: right;
+}
+
+/* ─── REFERENCES ─── */
+#recommendations { background: var(--paper); }
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ref-card {
+  padding: 36px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--paper2);
+  position: relative;
+}
+
+.ref-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px; font-weight: 900;
+  color: var(--rust);
+  line-height: 0.7;
+  margin-bottom: 20px;
+  display: block;
+  opacity: 0.35;
+}
+
+.ref-text {
+  font-size: 14px; line-height: 1.8;
+  color: var(--ink2); font-weight: 300;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.ref-author {
+  display: flex; align-items: center; gap: 14px;
+}
+
+.ref-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px; font-weight: 700;
+  color: var(--paper); flex-shrink: 0;
+}
+
+.ref-name {
+  font-size: 14px; font-weight: 500;
+  color: var(--ink);
+}
+
+.ref-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  background: var(--ink);
+  border-top: none;
+  padding: 120px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-bg-text {
+  position: absolute;
+  bottom: -40px; right: -20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 200px; font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.contact-inner { position: relative; z-index: 2; }
+
+.contact-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--rust);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+
+.contact-label::before {
+  content: ''; display: block;
+  width: 32px; height: 1px;
+  background: var(--rust);
+}
+
+.contact-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 900; line-height: 1.05;
+  letter-spacing: -2px; color: var(--paper);
+  margin-bottom: 16px;
+}
+
+.contact-heading em {
+  font-style: italic; color: var(--rust);
+}
+
+.contact-sub {
+  font-size: 15px; color: rgba(245,240,232,0.5);
+  margin-bottom: 56px; font-weight: 300;
+  max-width: 400px;
+}
+
+.contact-links {
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+
+.contact-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  color: var(--paper);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.contact-link:hover {
+  border-color: var(--rust);
+  color: var(--rust);
+  background: rgba(196,82,42,0.08);
+}
+
+.contact-link.primary {
+  background: var(--rust);
+  border-color: var(--rust);
+}
+
+.contact-link.primary:hover {
+  background: #d9673a;
+  border-color: #d9673a;
+  color: white;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink2);
+  padding: 24px 80px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.footer-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: rgba(245,240,232,0.3);
+}
+
+.footer-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: rgba(245,240,232,0.3);
+}
+
+/* ─── FADE ANIMATIONS ─── */
+.fade-up {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1; transform: translateY(0);
+}
+
+/* ─── HAMBURGER (hidden on desktop) ─── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  border: none;
+  background: none;
+  z-index: 600;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: rgba(245,240,232,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 28px;
+  z-index: 499;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.nav-drawer.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.nav-drawer a {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border2);
+  transition: color 0.2s;
+  display: block;
+}
+
+.nav-drawer a:last-child { border-bottom: none; }
+.nav-drawer a:hover { color: var(--ink); }
+.nav-drawer a.drawer-cta {
+  color: var(--rust);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ─── MOBILE STATS STRIP (hidden on desktop, shown on tablet/mobile) ─── */
+.hero-stats-strip {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 36px;
+  margin-left: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.strip-stat {
+  flex: 1 1 calc(50% - 1px);
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid var(--border);
+  min-width: 130px;
+}
+
+.strip-stat:nth-child(odd) {
+  padding-right: 20px;
+  border-right: 1px solid var(--border);
+}
+
+.strip-stat:nth-child(even) {
+  padding-left: 20px;
+}
+
+.strip-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--muted2);
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.strip-stat-value {
+  font-size: 15px; font-weight: 500;
+  color: var(--ink);
+}
+
+.strip-stat-value.accent { color: var(--rust); }
+
+/* ─── TABLET LARGE (≤ 1100px) ─── */
+@media (max-width: 1100px) {
+  .hero-left { padding: 72px 48px 72px 64px; }
+  section { padding: 88px 64px; }
+  footer { padding: 24px 64px; }
+  #contact { padding: 100px 64px; }
+}
+
+/* ─── TABLET (≤ 960px) ─── */
+@media (max-width: 960px) {
+  /* Nav */
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-drawer { display: flex; }
+
+  /* Hero */
+  #hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-right { display: none; }
+  .hero-stats-strip { display: flex; }
+  .hero-left { padding: 64px 48px 72px; }
+  .hero-left::before { display: none; }
+  .hero-eyebrow, h1, .hero-subtitle, .hero-bio, .hero-actions, .hero-stats-strip { margin-left: 0; }
+  .hero-bio { max-width: 100%; }
+
+  /* Sections */
+  section { padding: 72px 48px; }
+  .section-label { margin-bottom: 44px; }
+
+  /* Skills */
+  .skills-columns { grid-template-columns: 1fr 1fr; gap: 36px; }
+
+  /* Education */
+  .edu-grid { grid-template-columns: 1fr; }
+  .edu-card-full { grid-column: 1 / -1; }
+
+  /* Certs */
+  .certs-list { grid-template-columns: 1fr 1fr; }
+
+  /* Languages */
+  .lang-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* References */
+  .ref-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  #contact { padding: 88px 48px; }
+  .contact-heading { letter-spacing: -1.5px; }
+
+  /* Footer */
+  footer { padding: 20px 48px; flex-direction: column; gap: 6px; align-items: flex-start; }
+}
+
+/* ─── MOBILE (≤ 640px) ─── */
+@media (max-width: 640px) {
+  /* Nav */
+  nav { padding: 0 20px; }
+
+  /* Hero */
+  .hero-left { padding: 48px 24px 60px; }
+  h1 { font-size: clamp(40px, 11vw, 64px); letter-spacing: -1.5px; }
+  .hero-subtitle { font-size: 11px; }
+  .hero-bio { font-size: 15px; margin-bottom: 36px; }
+  .btn-primary, .btn-outline { padding: 12px 24px; font-size: 11px; }
+
+  /* Stats strip: full-width single column */
+  .strip-stat {
+    flex: 1 1 100%;
+    border-right: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Sections */
+  section { padding: 56px 24px; }
+  .section-label { margin-bottom: 32px; gap: 10px; }
+  .s-title { font-size: 28px; }
+  .s-num { display: none; }
+  .s-rule { display: none; }
+
+  /* Skills */
+  .skills-columns { grid-template-columns: 1fr; gap: 28px; }
+  .skill-item { padding: 12px 0; }
+
+  /* Education */
+  .edu-card { padding: 24px 20px; }
+  .edu-degree { font-size: 17px; }
+  .edu-badges { gap: 6px; }
+  .edu-badge { font-size: 10px; padding: 4px 10px; }
+
+  /* Certs */
+  .certs-list { grid-template-columns: 1fr; gap: 10px; }
+  .cert-row { padding: 18px 16px; gap: 14px; }
+  .cert-num { font-size: 22px; min-width: 28px; }
+  .cert-title { font-size: 13px; }
+  .cert-date { width: 100%; margin-left: 42px; margin-top: -4px; }
+
+  /* Languages */
+  .lang-card { padding: 24px 20px; }
+  .lang-name { font-size: 22px; }
+  .lang-header { flex-wrap: wrap; gap: 4px; }
+  .lang-row-name { width: 68px; font-size: 10px; }
+
+  /* References */
+  .ref-card { padding: 24px 20px; }
+  .ref-mark { font-size: 52px; margin-bottom: 12px; }
+  .ref-text { font-size: 13px; line-height: 1.7; }
+  .ref-name { font-size: 13px; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-card { padding: 24px 20px; }
+  .project-num { font-size: 36px; }
+  .project-title { font-size: 17px; }
+
+  /* Contact */
+  #contact { padding: 64px 24px; }
+  .contact-heading { font-size: clamp(32px, 9vw, 52px); letter-spacing: -1px; }
+  .contact-sub { font-size: 14px; margin-bottom: 36px; }
+  .contact-links { flex-direction: column; gap: 10px; }
+  .contact-link { width: 100%; justify-content: flex-start; font-size: 12px; padding: 13px 18px; }
+  .contact-bg-text { font-size: 100px; }
+
+  /* Footer */
+  footer { padding: 20px 24px; }
+  .footer-right { display: none; }
+}
+
+/* ─── PROJECTS ─── */
+#projects { background: var(--paper2); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 641px) {
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 961px) {
+  .projects-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.project-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(26,20,16,0.1);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--rust);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.project-card:hover::before { transform: scaleX(1); }
+
+.project-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; font-weight: 900;
+  font-style: italic;
+  color: var(--paper3);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.project-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  color: var(--ink2);
+  background: var(--paper2);
+}
+
+.project-tag.accent {
+  border-color: var(--rust);
+  color: var(--rust);
+  background: var(--rust-light);
+}
+
+.project-lang {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted2);
+  display: flex; align-items: center; gap: 6px;
+  margin-top: auto;
+}
+
+.project-lang::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--rust);
+}
+
+/* ─── SMALL MOBILE (≤ 420px) ─── */
+@media (max-width: 420px) {
+  h1 { font-size: clamp(34px, 10vw, 48px); letter-spacing: -1px; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-outline { text-align: center; width: 100%; }
+  .s-title { font-size: 24px; }
+  .eyebrow-text { font-size: 10px; letter-spacing: 1.5px; }
+  .edu-card { padding: 20px 16px; }
+  .ref-card { padding: 20px 16px; }
+  .lang-card { padding: 20px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-brand">M. <span>Hammad</span></div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certs</a>
+    <a href="#languages">Languages</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="nav-drawer" id="drawer">
+  <a href="#skills" class="drawer-link">Skills</a>
+  <a href="#projects" class="drawer-link">Projects</a>
+  <a href="#education" class="drawer-link">Education</a>
+  <a href="#certifications" class="drawer-link">Certifications</a>
+  <a href="#languages" class="drawer-link">Languages</a>
+  <a href="#recommendations" class="drawer-link">References</a>
+  <a href="#contact" class="drawer-cta">Contact →</a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" style="border-top:none; padding:0;">
+    <div class="hero-left">
+      <div class="hero-eyebrow fade-up">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-text">CS Student · Lahore, Pakistan</div>
+      </div>
+      <h1 class="fade-up">Muhammad<br><span class="name-line2">Hammad</span></h1>
+      <div class="hero-subtitle fade-up">Computer Science · Data Analytics · Web Dev</div>
+      <p class="hero-bio fade-up">
+        A motivated and hardworking student from Lahore, Pakistan, with a passion for Computer Science and technology. Scholarship recipient, aspiring to pursue world-class higher education and contribute positively to society.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#projects" class="btn-outline">See My Work</a>
+      </div>
+
+      <!-- Stats strip: visible on mobile/tablet only -->
+      <div class="hero-stats-strip fade-up">
+        <div class="strip-stat">
+          <div class="strip-stat-label">Status</div>
+          <div class="strip-stat-value accent">Open to Opps</div>
+        </div>
+        <div class="strip-stat">
+          <div class="strip-stat-label">HSSC Grade</div>
+          <div class="strip-stat-value">88.3% — A+</div>
+        </div>
+        <div class="strip-stat">
+          <div class="strip-stat-label">SSC Grade</div>
+          <div class="strip-stat-value">92% — A+</div>
+        </div>
+        <div class="strip-stat">
+          <div class="strip-stat-label">Scholarship</div>
+          <div class="strip-stat-value accent">Merit Award</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-initial">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+          <circle cx="300" cy="300" r="290" fill="#f5ede3" stroke="#e0d0c0" stroke-width="1.5"/>
+          <g stroke="#b5431a" stroke-width="2" stroke-linecap="round">
+            <line x1="300" y1="18" x2="300" y2="38"/>
+            <line x1="444" y1="55.7" x2="432" y2="75.8"/>
+            <line x1="554.3" y1="156" x2="544.2" y2="168"/>
+            <line x1="582" y1="300" x2="562" y2="300"/>
+            <line x1="554.3" y1="444" x2="544.2" y2="432"/>
+            <line x1="444" y1="544.3" x2="432" y2="524.2"/>
+            <line x1="300" y1="582" x2="300" y2="562"/>
+            <line x1="156" y1="544.3" x2="168" y2="524.2"/>
+            <line x1="45.7" y1="444" x2="55.8" y2="432"/>
+            <line x1="18" y1="300" x2="38" y2="300"/>
+            <line x1="45.7" y1="156" x2="55.8" y2="168"/>
+            <line x1="156" y1="55.7" x2="168" y2="75.8"/>
+          </g>
+          <circle cx="300" cy="148" r="6" fill="#b5431a"/>
+          <text x="118" y="310" font-family="Georgia,'Times New Roman',serif" font-size="220" font-weight="700" fill="#1a1a1a" letter-spacing="-4">M</text>
+          <text x="295" y="310" font-family="Georgia,'Times New Roman',serif" font-size="220" font-weight="700" fill="#b5431a" letter-spacing="-4">H</text>
+          <line x1="100" y1="330" x2="500" y2="330" stroke="#b5431a" stroke-width="3"/>
+          <text x="300" y="378" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#1a1a1a" text-anchor="middle" letter-spacing="2">MUHAMMAD HAMMAD</text>
+          <text x="300" y="414" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="400" fill="#b5431a" text-anchor="middle" letter-spacing="3">DEVELOPER · CS STUDENT</text>
+          <circle cx="300" cy="300" r="290" fill="none" stroke="#c8b8a8" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="hero-meta-stack">
+        <div class="meta-row fade-up">
+          <span class="meta-label">Status</span>
+          <span class="meta-value accent">Open to Opportunities</span>
+        </div>
+        <div class="meta-row fade-up">
+          <span class="meta-label">HSSC Grade</span>
+          <span class="meta-value">88.3% — A+</span>
+        </div>
+        <div class="meta-row fade-up">
+          <span class="meta-label">SSC Grade</span>
+          <span class="meta-value">92% — A+</span>
+        </div>
+        <div class="meta-row fade-up">
+          <span class="meta-label">Scholarship</span>
+          <span class="meta-value accent">Merit Award</span>
+        </div>
+        <div class="meta-row fade-up">
+          <span class="meta-label">Certifications</span>
+          <span class="meta-value">4 Completed</span>
+        </div>
+      </div>
+      <div class="hero-location-block fade-up">
+        <div class="location-label">Based in</div>
+        <div class="location-value">Lahore, Pakistan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label fade-up">
+      <span class="s-num">01</span>
+      <h2 class="s-title">Skill<em>set</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="skills-columns">
+      <div class="fade-up">
+        <div class="skill-group-title">Technical</div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span class="skill-name">C++</span>
+            <span class="skill-tag">Programming</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Python</span>
+            <span class="skill-tag">Programming</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Data Analytics</span>
+            <span class="skill-tag">Analytics</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Power BI</span>
+            <span class="skill-tag">BI Tool</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">WordPress</span>
+            <span class="skill-tag">Web Dev</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Microsoft Excel</span>
+            <span class="skill-tag">Spreadsheets</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Microsoft Word</span>
+            <span class="skill-tag">Documents</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">PowerPoint</span>
+            <span class="skill-tag">Presentations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="skill-group-title">Professional</div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span class="skill-name">Time Management</span>
+            <span class="skill-tag">Soft Skill</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Teamwork</span>
+            <span class="skill-tag">Soft Skill</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Financial Management</span>
+            <span class="skill-tag">Soft Skill</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Socio-Cultural Awareness</span>
+            <span class="skill-tag">Soft Skill</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label fade-up">
+      <span class="s-num">02</span>
+      <h2 class="s-title">Pro<em>jects</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-up">
+        <div class="project-num">01</div>
+        <div class="project-title">Inventory Management System</div>
+        <p class="project-desc">
+          A console-based application that helps small businesses track their products efficiently. Supports adding, searching, updating stock, and removing products with real-time low-stock alerts and total inventory valuation. Demonstrates practical use of arrays, functions, and structured data management — core concepts in Business Informatics.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag accent">C++</span>
+          <span class="project-tag">Arrays</span>
+          <span class="project-tag">Functions</span>
+          <span class="project-tag">Business Informatics</span>
+        </div>
+        <div class="project-lang">C++ · Console Application</div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-num">02</div>
+        <div class="project-title">Bank Management System</div>
+        <p class="project-desc">
+          A console-based banking simulation built in C++ that allows users to create accounts, deposit and withdraw funds, check balances, and view transaction history. Showcases real-world financial logic, input validation, and menu-driven interface design — directly relevant to financial systems in Business Informatics.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag accent">C++</span>
+          <span class="project-tag">Arrays</span>
+          <span class="project-tag">Functions</span>
+          <span class="project-tag">Finance</span>
+        </div>
+        <div class="project-lang">C++ · Console Application</div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-num">03</div>
+        <div class="project-title">Student Grade Management System</div>
+        <p class="project-desc">
+          A C++ program that digitalizes academic record management. Users can enter student names and grades, calculate class averages, rank students by performance, and identify top and bottom performers. Reflects real administrative needs in educational institutions and demonstrates strong logic-building and data processing skills.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag accent">C++</span>
+          <span class="project-tag">String Arrays</span>
+          <span class="project-tag">Functions</span>
+          <span class="project-tag">Data Processing</span>
+        </div>
+        <div class="project-lang">C++ · Console Application</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label fade-up">
+      <span class="s-num">03</span>
+      <h2 class="s-title"><em>Education</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card fade-up">
+        <div class="edu-period">Aug 2023 — Sep 2025</div>
+        <div class="edu-degree">Higher Secondary School Certificate</div>
+        <div class="edu-school">Punjab College of Information Technology — Lahore, Pakistan</div>
+        <div style="margin: 10px 0 6px; font-family: 'Playfair Display', serif; font-style: italic; color: var(--rust); font-size: 15px; font-weight: 700;">Intermediate in Computer Science</div>
+        <div style="font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted2); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Subjects</div>
+        <div style="font-size: 13px; color: var(--ink2); font-weight: 300; line-height: 1.9;">Computer Science<br>Mathematics<br>Physics</div>
+        <div class="edu-badges" style="margin-top: 20px;">
+          <span class="edu-badge highlight">88.3% · A+</span>
+          <span class="edu-badge highlight">Merit Scholarship</span>
+        </div>
+      </div>
+
+      <div class="edu-card fade-up">
+        <div class="edu-period">Jun 2021 — Jul 2023</div>
+        <div class="edu-degree">Secondary School Certificate</div>
+        <div class="edu-school">Bab-e-Arqam Model High School — Lahore, Pakistan<br>Natural Sciences, Mathematics & Statistics</div>
+        <div class="edu-badges">
+          <span class="edu-badge highlight">92% · A+</span>
+        </div>
+      </div>
+
+      <div class="edu-card edu-card-full fade-up" style="grid-column: 1 / -1;">
+        <div class="edu-period">Completed</div>
+        <div class="edu-degree">Soft Skills Training</div>
+        <div class="edu-school">Overseas Employment Corporation — Lahore, Pakistan<br>Professional development program focusing on workplace readiness</div>
+        <div class="edu-badges">
+          <span class="edu-badge">Certificate Awarded</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label fade-up">
+      <span class="s-num">04</span>
+      <h2 class="s-title">Certifi<em>cations</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="certs-list">
+      <div class="cert-row fade-up">
+        <div class="cert-num">01</div>
+        <div class="cert-info">
+          <div class="cert-title">Data Analytics & Business Intelligence</div>
+          <div class="cert-issuer">DigiSkills.pk</div>
+        </div>
+        <div class="cert-date">Oct 2025</div>
+      </div>
+
+      <div class="cert-row fade-up">
+        <div class="cert-num">02</div>
+        <div class="cert-info">
+          <div class="cert-title">Fundamentals of Programming Languages</div>
+          <div class="cert-issuer">MindLuster</div>
+        </div>
+        <div class="cert-date">Oct 2025</div>
+      </div>
+
+      <div class="cert-row fade-up">
+        <div class="cert-num">03</div>
+        <div class="cert-info">
+          <div class="cert-title">WordPress Development</div>
+          <div class="cert-issuer">DigiSkills.pk</div>
+        </div>
+        <div class="cert-date">Oct 2025</div>
+      </div>
+
+      <div class="cert-row fade-up">
+        <div class="cert-num">04</div>
+        <div class="cert-info">
+          <div class="cert-title">Soft Skills Training</div>
+          <div class="cert-issuer">Overseas Employment Corporation</div>
+        </div>
+        <div class="cert-date">Oct 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section id="languages">
+    <div class="section-label fade-up">
+      <span class="s-num">05</span>
+      <h2 class="s-title">Lang<em>uages</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="lang-grid">
+      <div class="lang-card fade-up">
+        <div class="lang-header">
+          <div class="lang-name">Urdu / Punjabi</div>
+          <div class="lang-proficiency">Native · C2</div>
+        </div>
+        <div class="lang-divider"></div>
+        <div class="lang-skills">
+          <div class="lang-row">
+            <span class="lang-row-name">All Skills</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="100%"></div></div>
+            <span class="lang-score">C2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-card fade-up">
+        <div class="lang-header">
+          <div class="lang-name">English</div>
+          <div class="lang-proficiency">Advanced · C1</div>
+        </div>
+        <div class="lang-divider"></div>
+        <div class="lang-skills">
+          <div class="lang-row">
+            <span class="lang-row-name">Listening</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="90%"></div></div>
+            <span class="lang-score">C1</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-row-name">Reading</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="90%"></div></div>
+            <span class="lang-score">C1</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-row-name">Writing</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="90%"></div></div>
+            <span class="lang-score">C1</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-row-name">Speaking</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="75%"></div></div>
+            <span class="lang-score">B2</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-row-name">Interaction</span>
+            <div class="lang-bar-bg"><div class="lang-bar" style="width:0%" data-width="65%"></div></div>
+            <span class="lang-score">B1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="recommendations">
+    <div class="section-label fade-up">
+      <span class="s-num">06</span>
+      <h2 class="s-title"><em>References</em></h2>
+      <div class="s-rule"></div>
+    </div>
+
+    <div class="ref-grid">
+      <div class="ref-card fade-up">
+        <span class="ref-mark">"</span>
+        <p class="ref-text">I have known Hammad Muhammad for several years as his Physics teacher. During this time, I found him to be a sincere and hardworking student with a good understanding of the subject. He is respectful, disciplined, and consistent in his efforts.</p>
+        <div class="ref-author">
+          <div class="ref-avatar">UT</div>
+          <div>
+            <div class="ref-name">Prof. Chaudhry Usman Ahmad Toor</div>
+            <div class="ref-role">Lecturer · Physics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-card fade-up">
+        <span class="ref-mark">"</span>
+        <p class="ref-text">I have known Hammad Muhammad for several years as his Class In-Charge. He is a responsible and well-mannered student who takes his studies seriously. He maintains a respectful attitude toward teachers and classmates and shows good character.</p>
+        <div class="ref-author">
+          <div class="ref-avatar">AA</div>
+          <div>
+            <div class="ref-name">Prof. Akhlaq Ahmad</div>
+            <div class="ref-role">Lecturer · Class In-Charge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-bg-text">Hello.</div>
+    <div class="contact-inner">
+      <div class="contact-label fade-up">Get In Touch</div>
+      <h2 class="contact-heading fade-up">Let's build<br>something <em>together.</em></h2>
+      <p class="contact-sub fade-up">Open to scholarship opportunities, internships, and collaborations in tech.</p>
+      <div class="contact-links fade-up">
+        <a href="mailto:mr.hammad.a8@gmail.com" class="contact-link primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          mr.hammad.a8@gmail.com
+        </a>
+        <a href="tel:+923074729010" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg>
+          +92 307 472 9010
+        </a>
+        <a href="https://www.linkedin.com/in/mohd-hammad-" target="_blank" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn Profile
+        </a>
+        <a href="#" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Lahore, Pakistan
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-copy">© <span id="year"></span> Muhammad Hammad. All rights reserved.</div>
+  <div class="footer-right">DOB 02/10/2007 · Lahore, Pakistan</div>
+</footer>
+
+<script>
+  // Dynamic year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('drawer');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+  });
+
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
+  });
+
+  // Fade-up on scroll — with iOS Safari fix
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // iOS Safari fix: force-show elements already in viewport on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.fade-up').forEach((el, i) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        setTimeout(() => el.classList.add('visible'), i * 60);
+      }
+    });
+  });
+
+  // Language bars animate when in view
+  const barObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.lang-bar').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.lang-card').forEach(card => barObserver.observe(card));
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      if (href === '#' + current) {
+        a.style.color = 'var(--ink)';
+      } else if (!a.classList.contains('nav-cta')) {
+        a.style.color = '';
+      }
+    });
+  });
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Hammad — Developer & CS Student</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1410;
+  --ink2: #2d2520;
+  --paper: #f5f0e8;
+  --paper2: #ede7d9;
+  --paper3: #e4dccb;
+  --rust: #c4522a;
+  --rust-light: rgba(196,82,42,0.12);
+  --rust-mid: rgba(196,82,42,0.25);
+  --muted: #7a6e62;
+  --muted2: #a09488;
+  --border: rgba(26,20,16,0.1);
+  --border2: rgba(26,20,16,0.06);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--paper2); }
+::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 3px; }
+
+/* ─── NOISE TEXTURE overlay ─── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 1000;
+  opacity: 0.6;
+}
+
+/* ─── TOPBAR NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 60px;
+  background: rgba(245,240,232,0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  z-index: 500;
+}
+
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+
+.nav-brand span {
+  color: var(--rust);
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+}
+
+.nav-links a {
+  font-size: 13px; font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+  font-family: 'DM Mono', monospace;
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+  font-size: 12px !important;
+  color: var(--rust) !important;
+  border: 1px solid var(--rust) !important;
+  padding: 7px 18px;
+  border-radius: 4px;
+  transition: all 0.2s !important;
+}
+
+.nav-cta:hover {
+  background: var(--rust) !important;
+  color: var(--paper) !important;
+}
+
 .nav-right-group {
   display: flex;
   align-items: center;
